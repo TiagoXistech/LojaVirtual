@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada.Dominio", "Camada.Dominio\Camada.Dominio.csproj", "{0ABB59E9-6983-4387-87D2-220BF9AE70AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada.Web", "Camada.Web\Camada.Web.csproj", "{6327C1E3-2880-4DD1-AB73-E358A543D919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Camada.Teste", "Camada.Teste\Camada.Teste.csproj", "{6967B4B3-D152-4606-80FA-1DA2715E0116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ABB59E9-6983-4387-87D2-220BF9AE70AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABB59E9-6983-4387-87D2-220BF9AE70AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABB59E9-6983-4387-87D2-220BF9AE70AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABB59E9-6983-4387-87D2-220BF9AE70AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6327C1E3-2880-4DD1-AB73-E358A543D919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6327C1E3-2880-4DD1-AB73-E358A543D919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6327C1E3-2880-4DD1-AB73-E358A543D919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6327C1E3-2880-4DD1-AB73-E358A543D919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6967B4B3-D152-4606-80FA-1DA2715E0116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6967B4B3-D152-4606-80FA-1DA2715E0116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6967B4B3-D152-4606-80FA-1DA2715E0116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6967B4B3-D152-4606-80FA-1DA2715E0116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
