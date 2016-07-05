@@ -7,8 +7,6 @@ namespace Camada.Web.Controllers
     public class ProdutosController : Controller
     {
         private ProdutosRepositorio Repositorio;
-        //
-        // GET: /Produtos/
         public ActionResult Index()
         {
             Repositorio = new ProdutosRepositorio();
