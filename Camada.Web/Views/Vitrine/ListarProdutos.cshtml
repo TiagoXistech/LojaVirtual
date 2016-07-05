@@ -1,51 +1,13 @@
-﻿@model IEnumerable<Camada.Dominio.Entidades.Produto>
+﻿@using Camada.Web.HtmlHelpers
+@model Camada.Web.Models.ProdutosViewModel
 
-@{
-    ViewBag.Title = "Listagem de produtos por paginação";
+
+@foreach (var Produto in Model.Produtos)
+{
+    @Html.Partial("ProdutoDetalhes", Produto)
 }
 
-<h2>ListarProdutos</h2>
+<div class="btn-group pull-right">
+    @Html.Pagelinks(Model.Paginacao, x => Url.Action("ListarProdutos", new { Pagina = x }))
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Preco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Categoria)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Categoria)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProdutoId })
-        </td>
-    </tr>
-}
-
-</table>
