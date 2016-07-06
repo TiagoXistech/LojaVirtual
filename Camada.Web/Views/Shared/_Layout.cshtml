@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Lova Virtual</title>
+    <title>@ViewBag.Title - Nova loja</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -19,7 +19,7 @@
                 </button>
 
                 @Html.ActionLink(
-                   "Loja Virtual",
+                   "E-commerce",
                    "Index",
                    "Home",
                    new { area = "" }, new { @class = "navbar-brand" }
@@ -34,12 +34,11 @@
     </div>
 
     <div class="container body-content">
-
+        <br />
         <div class="row panel">
             <div id="categorias" class="col-xs-3">
-                Minhas categorias
+            @Html.Action("Menu", "Categoria")
             </div>
-
 
             <div id="categorias" class="col-xs-8">
                 @RenderBody()
@@ -48,7 +47,7 @@
     
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Aplicação MVC</p>
+            <p>&copy; @DateTime.Now.Year - Aplicação desenvolvida utilizando MVC</p>
         </footer>
     </div>
 

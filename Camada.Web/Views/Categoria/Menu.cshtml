@@ -1,0 +1,19 @@
+﻿@model System.Collections.Generic.IEnumerable<string>
+
+@Html.ActionLink("Todos os produtos", "ListarProdutos", "Vitrine", null, new { @class = "btn btn-block btn-primary btn-lg" })
+
+@foreach (var link in Model)
+{
+    @Html.RouteLink(link, new
+{
+    controller = "Vitrine",
+    action = "ListarProdutos",
+    categoria = link,
+    pagina = 1
+}, new
+{
+    @class = "btn btn-block btn-primary btn-lg"
+        + (link == ViewBag.CategoriaSelecionada ? " btn-warning" : "")
+})
+}
+
