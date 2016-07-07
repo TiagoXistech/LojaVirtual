@@ -13,6 +13,12 @@ namespace Camada.Dominio.Entidades
 
         private readonly List<ItemCarrinho> _itemCarrinho = new List<ItemCarrinho>();
 
+        //Itens carrinho
+        public IEnumerable<ItemCarrinho> ItensCarrinho
+        {
+            get { return _itemCarrinho; }
+        }
+
         //Adicionar
         public void AdicionarItem(Produto produto, int quantidade)
         {
@@ -52,11 +58,7 @@ namespace Camada.Dominio.Entidades
             _itemCarrinho.Clear();
         }
 
-        //Itens carrinho
-        public IEnumerable<ItemCarrinho> ItensCarrinho
-        {
-            get { return _itemCarrinho; }
-        }
+     
 
     }
 
