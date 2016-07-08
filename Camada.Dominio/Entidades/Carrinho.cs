@@ -19,7 +19,7 @@ namespace Camada.Dominio.Entidades
             get { return _itemCarrinho; }
         }
 
-        //Adicionar
+        //Adicionar item
         public void AdicionarItem(Produto produto, int quantidade)
         {
             ItemCarrinho item = _itemCarrinho.FirstOrDefault(p => p.Produto.ProdutoId == produto.ProdutoId);
@@ -46,7 +46,7 @@ namespace Camada.Dominio.Entidades
             _itemCarrinho.RemoveAll(l => l.Produto.ProdutoId == produto.ProdutoId);
         }
 
-        //Obter o valor total
+        //Obter o valor total itens
         public decimal ObterValorTotal()
         {
             return _itemCarrinho.Sum(e => e.Produto.Preco * e.Quantidade);
@@ -57,8 +57,6 @@ namespace Camada.Dominio.Entidades
         {
             _itemCarrinho.Clear();
         }
-
-     
 
     }
 

@@ -14,7 +14,9 @@ namespace Camada.Teste
             Produto Produto1 = new Produto
             {
                 ProdutoId = 1,
-                Nome = "Produto1"
+                Nome = "Produto1",
+                Descricao = "Novo produto"
+                
             };
 
             Produto Produto2 = new Produto
@@ -68,8 +70,6 @@ namespace Camada.Teste
             //Assert
             Assert.AreEqual(resultado.Length, 2);
 
-
-
         }
 
         [TestMethod]
@@ -91,6 +91,7 @@ namespace Camada.Teste
         [TestMethod]
         public void CalcularValorTotal()
         {
+            //Arrange
             Produto Produto1 = new Produto { ProdutoId = 1, Nome = "Produto1", Preco = 10M };
             Produto Produto2 = new Produto { ProdutoId = 2, Nome = "Produto2", Preco = 20M };
             Produto Produto3 = new Produto { ProdutoId = 3, Nome = "Produto3", Preco = 30M };
@@ -100,8 +101,31 @@ namespace Camada.Teste
             cart.AdicionarItem(Produto2, 1);
             cart.AdicionarItem(Produto3, 1);
 
+            //Act
             decimal Resultado = cart.ObterValorTotal();
+
+            //Assert
             Assert.AreEqual(Resultado, 60M);
+        }
+
+        [TestMethod]
+        public void LimparCarrinho()
+        {
+            //Arrange
+            Produto Produto1 = new Produto { ProdutoId = 1, Nome = "Produto1", Preco = 10M };
+            Produto Produto2 = new Produto { ProdutoId = 2, Nome = "Produto2", Preco = 20M };
+            Produto Produto3 = new Produto { ProdutoId = 3, Nome = "Produto3", Preco = 30M };
+
+            Carrinho cart = new Carrinho();
+            cart.AdicionarItem(Produto1, 1);
+            cart.AdicionarItem(Produto2, 1);
+            cart.AdicionarItem(Produto3, 1);
+
+            //Act
+            cart.LimparCarrinho();
+
+            //Assert
+            Assert.AreEqual(cart.ItensCarrinho.Count(), 0);
         }
     }
 }
